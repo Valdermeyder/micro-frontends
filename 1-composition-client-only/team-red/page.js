@@ -52,6 +52,7 @@ function renderPage() {
     <h1 id="store">The Model Store</h1>
     <blue-basket id="basket"></blue-basket>
     <div id="image"><div><img src="${variant.image}" alt="${variant.name}" /></div></div>
+    <div id="favourite"><button>Add to favourites</button></div>
     <h2 id="name">${product.name} <small>${variant.name}</small></h2>
     <div id="options">${product.variants.map(renderOption).join('')}</div>
     <blue-buy id="buy" sku="${variant.sku}"></blue-buy>

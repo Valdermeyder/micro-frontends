@@ -113,7 +113,7 @@
           
           blue-buy {
             display: block;
-            outline: 3px solid royalblue;
+            outline: 3px royalblue;
             padding: 5px;
           }
         </style>

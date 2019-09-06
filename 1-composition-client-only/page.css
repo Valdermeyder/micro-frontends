@@ -40,7 +40,7 @@ dd {
       'store basket'
       'image name'
       'image options'
-      'image buy'
+      'favourite buy'
       'reco reco';
     grid-template-columns: 4fr 3fr;
   }
@@ -52,7 +52,7 @@ dd {
       'store basket  reco'
       'image name    reco'
       'image options reco'
-      'image buy     reco';
+      'favourite buy     reco';
     grid-template-columns: 4fr 3fr 200px;
     width: 1000px;
   }
@@ -62,6 +62,18 @@ dd {
   font-weight: 400;
   grid-area: store;
   margin-top: 5px;
+}
+
+#favourite {
+  grid-area: favourite;
+  align-self: center;
+  display: block;
+  outline: 3px solid pink;
+  padding: 5px;
+}
+
+button {
+  background: none
 }
 
 #image {
