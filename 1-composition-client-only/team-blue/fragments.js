@@ -27,7 +27,29 @@
     render() {
       const classname = state.count === 0 ? 'empty' : 'filled';
       this.innerHTML = `
-        <div class="${classname}">basket: ${state.count} item(s)</div>
+        <style>
+          blue-basket {
+            display: block;
+            outline: 3px royalblue;
+            padding: 5px;
+          }
+          
+          .empty,
+          .filled {
+            border-radius: 5px;
+            color: white;
+            padding: 5px 10px;
+          }
+          
+          .empty {
+            background-color: gray;
+          }
+          
+          .filled {
+            background-color: seagreen;
+          }
+        </style>
+        <button class="${classname}">basket: ${state.count} item(s)</button>
       `;
     }
 
@@ -67,7 +89,36 @@
     render() {
       const sku = this.getAttribute('sku');
       const price = prices[sku];
-      this.innerHTML = `<button type="button">buy for ${price}</button>`;
+      this.innerHTML = `
+        <style>
+          button {
+            background: none;
+            border: 1px solid gray;
+            border-radius: 20px;
+            cursor: pointer;
+            display: block;
+            font-size: 20px;
+            outline: none;
+            padding: 20px;
+            width: 100%;
+          }
+          
+          button:hover {
+            border-color: black;
+          }
+          
+          button:active {
+            border-color: seagreen;
+          }
+          
+          blue-buy {
+            display: block;
+            outline: 3px solid royalblue;
+            padding: 5px;
+          }
+        </style>
+        <button type="button">Buy for ${price}</button>
+      `;
     }
 
     attributeChangedCallback(attr, oldValue, newValue) {

@@ -31,7 +31,6 @@ dd {
   grid-row-gap: 10px;
   margin: 20px auto;
   min-width: 500px;
-  outline: 3px dashed orangered;
   padding: 15px;
 }
 
@@ -63,28 +62,6 @@ dd {
   font-weight: 400;
   grid-area: store;
   margin-top: 5px;
-}
-
-#basket {
-  align-self: baseline;
-  grid-area: basket;
-  justify-self: end;
-  margin-top: 11px;
-}
-
-#basket .empty,
-#basket .filled {
-  border-radius: 5px;
-  color: white;
-  padding: 5px 10px;
-}
-
-#basket .empty {
-  background-color: gray;
-}
-
-#basket .filled {
-  background-color: seagreen;
 }
 
 #image {
@@ -143,31 +120,6 @@ dd {
   max-width: 100%;
 }
 
-#buy {
-  align-self: center;
-  grid-area: buy;
-}
-
-#buy button {
-  background: none;
-  border: 1px solid gray;
-  border-radius: 20px;
-  cursor: pointer;
-  display: block;
-  font-size: 20px;
-  outline: none;
-  padding: 20px;
-  width: 100%;
-}
-
-#buy button:hover {
-  border-color: black;
-}
-
-#buy button:active {
-  border-color: seagreen;
-}
-
 #reco {
   grid-area: reco;
 }
@@ -203,18 +155,17 @@ dd {
 
 green-recos {
   display: block;
-  outline: 3px dashed forestgreen;
   width: 100%;
 }
 
-blue-basket {
-  display: block;
-  outline: 3px dashed royalblue;
-  padding: 5px;
+#basket {
+  align-self: baseline;
+  grid-area: basket;
+  justify-self: end;
+  margin-top: 11px;
 }
 
-blue-buy {
-  display: block;
-  outline: 3px dashed royalblue;
-  padding: 5px;
+#buy {
+  align-self: center;
+  grid-area: buy;
 }
