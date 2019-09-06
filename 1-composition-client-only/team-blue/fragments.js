@@ -92,7 +92,7 @@
       this.innerHTML = `
         <style>
           button {
-            background: none;
+            background: green;
             border: 1px solid gray;
             border-radius: 20px;
             cursor: pointer;
@@ -113,7 +113,7 @@
           
           blue-buy {
             display: block;
-            outline: 3px royalblue;
+            outline: 3px solid royalblue;
             padding: 5px;
           }
         </style>
