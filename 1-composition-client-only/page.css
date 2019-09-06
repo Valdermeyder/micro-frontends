@@ -73,7 +73,15 @@ dd {
 }
 
 button {
-  background: none
+  background: none;
+  border: 1px solid gray;
+  border-radius: 20px;
+  cursor: pointer;
+  display: block;
+  font-size: 20px;
+  outline: none;
+  padding: 20px;
+  width: 100%;
 }
 
 #image {

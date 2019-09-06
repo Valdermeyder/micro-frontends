@@ -66,6 +66,11 @@
 
 
   class BlueBuy extends HTMLElement {
+    constructor() {
+      super();
+      this.attachShadow({mode: "open"});
+    }
+
     static get observedAttributes() {
       return ['sku'];
     }
@@ -75,7 +80,7 @@
       const sku = this.getAttribute('sku');
       this.log('connected', sku);
       this.render();
-      this.firstChild.addEventListener('click', this.addToCart);
+      this.shadowRoot.querySelector('button').addEventListener('click', this.addToCart);
     }
 
     addToCart() {
@@ -89,7 +94,7 @@
     render() {
       const sku = this.getAttribute('sku');
       const price = prices[sku];
-      this.innerHTML = `
+      this.shadowRoot.innerHTML = `
         <style>
           button {
             background: green;
@@ -127,7 +132,7 @@
     }
 
     disconnectedCallback() {
-      this.firstChild.removeEventListener('click', this.addToCart);
+      this.shadowRoot.querySelector('button').removeEventListener('click', this.addToCart);
       const sku = this.getAttribute('sku');
       this.log('disconnected', sku);
     }
